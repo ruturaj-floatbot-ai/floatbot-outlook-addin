@@ -26,12 +26,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
-      </DesktopSettings>
-    </Form>
-    <Form xsi:type="ItemEdit">
-      <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <SourceLocation DefaultValue="https://ruturaj-floatbot-ai.github.io/floatbot-outlook-addin/command.html"/>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -53,7 +48,6 @@
         <Host xsi:type="MailHost">
           <DesktopFormFactor>
             <FunctionFile resid="Commands.Url"/>
-
             <ExtensionPoint xsi:type="MessageComposeCommandSurface">
               <OfficeTab id="Message">
                 <Group id="msgComposeGroup">
@@ -86,7 +80,7 @@
           <bt:Image id="Icon.80" DefaultValue="https://floatbot.ai/favicon.ico"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/command.html"/>
+          <bt:Url id="Commands.Url" DefaultValue="https://ruturaj-floatbot-ai.github.io/floatbot-outlook-addin/command.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="Group.Label" DefaultValue="Floatbot Tools"/>
