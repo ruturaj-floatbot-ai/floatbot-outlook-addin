@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function formatLinks(event) {
+      Office.context.mailbox.item.body.getAsync("html", (result) => {
+        if (result.status === Office.AsyncResultStatus.Succeeded) {
+          let body = result.value;
+
+          body = body.replace(/LEXI here/gi, '<a href="https://floatbot.ai/experience-zone/" target="_blank">LEXI here</a>');
+          body = body.replace(/Grab time here/gi, '<a href="https://meetings.hubspot.com/ruturaj-rana" target="_blank">Grab time here</a>');
+
+          Office.context.mailbox.item.body.setAsync(body, { coercionType: "html" }, () => {
+            event.completed();
+          });
+        } else {
+          event.completed();
+        }
+      });
+    }
+
+    Office.actions.associate("formatLinks", formatLinks);
+  </script>
+</head>
+<body></body>
+</html>
